@@ -13,7 +13,7 @@ module.exports = {
 
     if (targetDev.likes.includes(loggedDev._id)) {
       const loggedSocket = req.connectUsers[user];
-      const targetSocket = reqq.connectUsers[devId];
+      const targetSocket = req.connectUsers[devId];
 
       if (loggedSocket) {
         req.io.to(loggedSocket).emit("match", targetDev);
