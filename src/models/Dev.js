@@ -17,10 +17,15 @@ const DevSchema = new Schema(
     likes: [
       {
         type: Schema.Types.ObjectId,
-        red: "Dev"
+        ref: "Dev"
       }
     ],
-    dislikes: [{ type: Schema.Types.ObjectId, red: "Dev" }]
+    dislikes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Dev"
+      }
+    ]
   },
   {
     timestamps: true
